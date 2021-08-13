@@ -1,0 +1,22 @@
+{
+  "name": "desafio-front-end",
+  "version": "0.0.0",
+  "description": "Desafio para desenvolvedores front-end",
+  "dependencies": {},
+  "devDependencies": {
+    "json-server": "^0.12.2"
+  },
+  "scripts": {
+    "server": "json-server --watch ./endpoints/db.json -p 84 --static ./endpoints/files"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viniciusrebel/Desafio-Front-End.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viniciusrebel/Desafio-Front-End/issues"
+  },
+  "homepage": "https://github.com/viniciusrebel/Desafio-Front-End#readme"
+}

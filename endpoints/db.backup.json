@@ -1,0 +1,83 @@
+{
+    "comunicados": [
+        {
+            "id": 1,
+            "title": "Metas Março",
+            "seen": false,
+            "type": 0,
+            "description": "Planos controle agora também disponível no cartão de crédito.",
+            "fullDescription":"Planos controle agora também disponível no cartão de crédito.",
+            "date": "2018-05-03 8:30"
+        },
+        {
+            "id": 2,
+            "title": "Bônus Fevereiro",
+            "seen": false,
+            "type": 1,
+            "description": "Planos controle 5GB de internet 4G.",
+            "fullDescription":"Ligações ilimitadas locais para todas as operadoras. Ligações ilimitadas pra fixos nacional e qualquer Vivo do Brasil com o código 15. SMS ilimitado para qualquer operadora do Brasil.",
+            "date": "2018-05-02 10:30"
+        },
+        {
+            "id": 3,
+            "title": "Novos Serviços",
+            "seen": false,
+            "type": 1,
+            "description": "Novos serviços, clique para visualizar o material de divulgação.",
+            "fullDescription":"Novos serviços, clique para visualizar o material de divulgação.",
+            "date": "2018-05-02 18:30",
+            "files": [
+                {
+                    "type": "image/*",
+                    "name": "Material de divulgação",
+                    "url": "logob4.png"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Planos controle agora tambem disponivel",
+            "seen": false,
+            "type": 0,
+            "description": "Planos controle agora tambem disponivel no cartao de credito.",
+            "fullDescription":"A primeira geração de tecnologias para aparelhos móveis de telecomunicação é a analógica, a segunda é a digital e a terceira (o 3G) é a era dos aparelhos inteligentes, que transmitem grandes volumes de dados em alta velocidade. Nela, os aparelhos acessam a internet, gerenciam arquivos e fazem videoconferências. A rede de terceira geração é baseada na tecnologia HSPA (High Speed Packet Access), que permite acesso à internet em alta velocidade via celular. Na prática, isso significa menor tempo de download e mais rapidez no acesso às informações. É banda larga móvel. Através dela é possível navegar na internet usando um laptop ou desktop com modem USB ou usar o seu aparelho 3G como modem, conectado ao computador via cabo. Usada por mais de um bilhão de pessoas em mais de 200 países, o Global System for Mobile Communications (Sistema Global para Comunicações Móveis) é a tecnologia para celular mais popular do mundo. Os aparelhos com essa tecnologia funcionam com o Vivo Chip, trocando informações com a Vivo por ondas de rádio e armazenando o número da linha, suas senhas pessoais (PIN e PUK) e seus dados pessoais, como a agenda de contatos. A Vivo opera em diferentes bandas (faixas de frequência) com a tecnologia GSM, que podem variar segundo a localidade. Verifique qual a banda de operação da rede GSM da Vivo na sua região.",
+            "date": "2018-05-01 8:00"
+        },
+        {
+            "id": 5,
+            "title": "Campanha Banda Larga",
+            "seen": true,
+            "type": 2,
+            "description": "Experimente a Banda Larga de Ultravelocidade com Vivo Fibra",
+            "fullDescription":"Baixe arquivos, assista a vídeos em HD e jogue online com maior desempenho. Acesse a internet de vários dispositivos ao mesmo tempo na sua casa e com mais estabilidade. Compartilhe fotos e vídeos com rapidez através de altas velocidades de upload. Wi-Fi grátis para toda a família acessar ao mesmo tempo",
+            "date": "2018-04-25 6:30"
+        },
+        {
+            "id": 6,
+            "title": "CAMPANHA DAS 60 ALTAS",
+            "seen": false,
+            "type": 3,
+            "description": "A CAMPANHA DAS 60 ALTAS ESTÁ VALENDO ATÉ DIA 30/09, TEMOS QUE ENTREGAR A META, PORTANTO, TEMOS QUE FAZER 05 ALTAS DE CONTROLE AO DIA. O MELHOR VENDEDOR GANHARÁ UMA MOCHILA DE NOTEBOOK DA VIVO, TOP DAS GALÁXIAS E MAIS OS R$ 80,00 DA FÁTIMA!!! VAMOS PRA CIMA GALERA!!!!",
+            "fullDescription":"A CAMPANHA DAS 60 ALTAS ESTÁ VALENDO ATÉ DIA 30/09, TEMOS QUE ENTREGAR A META, PORTANTO, TEMOS QUE FAZER 05 ALTAS DE CONTROLE AO DIA. O MELHOR VENDEDOR GANHARÁ UMA MOCHILA DE NOTEBOOK DA VIVO, TOP DAS GALÁXIAS E MAIS OS R$ 80,00 DA FÁTIMA!!! VAMOS PRA CIMA GALERA!!!!",
+            "date": "2018-02-01 12:30"
+        }
+    ],
+    "tiposComunicados":[
+        {
+            "type": 0,
+            "name": "Informativos SUN"
+        },
+        {
+            "type": 1,
+            "name": "Força de Vendas"
+        },
+        {
+            "type": 2,
+            "name": "Vivo Ligado"
+        },
+        {
+            "type": 3,
+            "name": "Turbine Suas Vendas"
+        }
+    ]
+}
