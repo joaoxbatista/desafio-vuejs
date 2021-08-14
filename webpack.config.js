@@ -10,9 +10,9 @@ module.exports = {
     /**
     *  Configuração dos arquivos de entrada e saída
     */
-    entry: join(__dirname, 'app.js'), 
+    entry: join(__dirname, 'src', 'app.js'), 
     output: {
-        path: join(__dirname, 'build'), 
+        path: join(__dirname, 'dist','build'), 
         filename: 'app.min.js'
     },
 
@@ -37,7 +37,21 @@ module.exports = {
                     'vue-style-loader',
                     'css-loader'
                 ]
-            }
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    {
+                    loader: "sass-loader",
+                    options: {
+                        // Prefer `dart-sass`
+                        implementation: require("dart-sass"),
+                    },
+                    },
+                ],
+            },
         ]
     },
 
@@ -50,7 +64,7 @@ module.exports = {
         new HTMLWebpackPlugin({
             showErrors: true,
             cache: true,
-            template: join(__dirname, 'index.html')
+            template: join(__dirname, 'public', 'index.html')
         })
     ]
 
