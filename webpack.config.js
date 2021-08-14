@@ -12,47 +12,54 @@ module.exports = {
     */
     entry: join(__dirname, 'src', 'app.js'), 
     output: {
-        path: join(__dirname, 'dist','build'), 
-        filename: 'app.min.js'
+      path: join(__dirname, 'dist','build'), 
+      filename: 'app.min.js'
     },
 
+    resolve: {  
+      alias: {  
+          '@': join(__dirname, 'src'),
+      },  
+    }, 
+    
     /**
     *  Configuração dos loaders
     */
-     module: {
-        rules: [
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
+    module: {
+      rules: [
+          {
+            test: /\.js$/,
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env']
+            }
+          }, {
+            test: /.vue$/, 
+            loader: 'vue-loader'
+          },
+          {
+            test: /\.css$/, 
+            use: [
+              'vue-style-loader',
+              'css-loader'
+            ]
+          },
+          {
+            test: /\.s[ac]ss$/i,
+            use: [
+              "style-loader",
+              "css-loader",
+              {
+                loader: "sass-loader",
                 options: {
-                    presets: ['@babel/preset-env']
-                }
-            }, {
-                test: /.vue$/, 
-                loader: 'vue-loader'
-            },
-            {
-                test: /\.css$/, 
-                use: [
-                    'vue-style-loader',
-                    'css-loader'
-                ]
-            },
-            {
-                test: /\.s[ac]ss$/i,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    {
-                    loader: "sass-loader",
-                    options: {
-                        // Prefer `dart-sass`
-                        implementation: require("dart-sass"),
-                    },
-                    },
-                ],
-            },
-        ]
+                  // Prefer `dart-sass`
+                    implementation: require("dart-sass"),
+                    additionalData: `@import '@/scss/_variables.scss';`
+                },
+              },
+            ],
+          },
+      ]
     },
 
     /**
@@ -66,6 +73,5 @@ module.exports = {
             cache: true,
             template: join(__dirname, 'public', 'index.html')
         })
-    ]
-
+    ],
 }
