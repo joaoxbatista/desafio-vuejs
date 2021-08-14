@@ -1,20 +1,32 @@
 <template>
-  <div class="dashboard">
-    <h3>Pagina inicial</h3>
+  <div class="container">
+    <card-comunication></card-comunication>
   </div>
 </template>
 
 <script>
+import CardComunication from './components/CardComunication/CardComunication.vue';
 export default {
-  name: "App",
-  data() {
-    return {};
+  name: 'App',
+  components: {
+    CardComunication,
   },
 };
 </script>
 
-<style scoped lang="scss">
-.dashboard {
-  background: red;
+<style lang="scss">
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  background: $whisper-dark;
+}
+
+.container {
+  padding: 15px;
 }
 </style>
+
