@@ -52,7 +52,10 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": "prettier --write"
+    "*.js": [
+      "eslint",
+      "prettier --write"
+    ]
   },
   "eslintConfig": {
     "root": true,
