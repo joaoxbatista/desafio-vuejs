@@ -9,14 +9,37 @@
       </router-link>
     </template>
 
-    <statement-file-list :files="data.files"></statement-file-list>
+    <statement-file-list
+      :files="data.files"
+      v-if="!details"
+    ></statement-file-list>
 
     <div class="statement-card__footer">
       <p clas="statement-card__type">
         {{ statementType }}
       </p>
-      <span class="statement-card__datetime">{{ data.date | formatDate}}</span>
+      <span class="statement-card__datetime">{{ data.date | formatDate }}</span>
     </div>
+
+    <template v-if="data.description && details">
+      <h4 class="statement-card__label">Conteúdo:</h4>
+      <div class="statement-card__text">
+        {{ data.description }}
+      </div>
+    </template>
+
+    <template v-if="showFullDescription && details">
+      <h4 class="statement-card__label"></h4>
+      <div class="statement-card__text">
+        {{ data.fullDescription }}
+      </div>
+    </template>
+
+    <statement-file-list
+      :files="data.files"
+      v-if="details"
+      class="mt-14"
+    ></statement-file-list>
   </Card>
 </template>
 
@@ -33,7 +56,17 @@
       Card,
       StatementFileList,
     },
-    props: ['data'],
+    props: {
+      data: {
+        type: Object,
+        default: () => {
+          return {};
+        },
+      },
+      details: {
+        type: Boolean,
+      },
+    },
 
     computed: {
       ...mapState('statement_types', ['statementTypes']),
@@ -46,13 +79,17 @@
       },
 
       statementType() {
-        if (this.statementTypeEnum == null) return 'Sem categoria';
+        if (this.statement && this.statement?.type < 0) return 'Sem categoria';
 
         const result = this.statementTypes.filter((statementType) => {
           return statementType.type === this.statementTypeEnum;
         })?.[0];
 
         return result?.name ?? 'Sem categoria';
+      },
+
+      showFullDescription() {
+        return this.data.description !== this.data.fullDescription;
       },
     },
     methods: {
@@ -107,6 +144,15 @@
       color: $grey;
       text-align: right;
       min-width: 100px;
+    }
+
+    &__label {
+      margin-bottom: 5px;
+      margin-top: 14px;
+    }
+
+    &__text {
+      margin-bottom: 12px;
     }
   }
 </style>
