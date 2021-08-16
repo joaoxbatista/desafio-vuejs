@@ -1,12 +1,12 @@
 <template>
   <div>
-    <statement-type-filter class="mb-14"></statement-type-filter>
+    <statement-type-filter class="mb-14" />
     <statement-card
       class="mb-14"
       v-for="statement in filteredStatement"
       :key="`statement-${statement.id}`"
       :data="statement"
-    ></statement-card>
+    />
   </div>
 </template>
 
