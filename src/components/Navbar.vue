@@ -2,12 +2,12 @@
   <div class="navbar">
     <div class="navbar__wrapper">
       <button class="navbar__menu-button">
-      <i class="fa fa-bars"></i>
-    </button>
-    <h1 class="navbar__title">{{ title }}</h1>
-    <button class="navbar__search-button">
-      <i class="fa fa-search"></i>
-    </button>
+        <i class="fa fa-bars"></i>
+      </button>
+      <h1 class="navbar__title">{{ title }}</h1>
+      <button class="navbar__search-button">
+        <i class="fa fa-search"></i>
+      </button>
     </div>
   </div>
 </template>
@@ -33,7 +33,7 @@
       display: flex;
       justify-content: space-between;
 
-      @media screen and (min-width: 720px){
+      @media screen and (min-width: 720px) {
         max-width: 720px;
         margin: 0 auto;
       }
