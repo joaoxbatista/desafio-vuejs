@@ -1,5 +1,31 @@
-@import './variables';
+@import './abstract/variables';
+@import './base/index.scss' ;
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: $whisper-dark;
+}
+
+.container {
+  padding: 15px;
+}
 
 .mb-14 {
   margin-bottom: 14px;
+}
+.mt-14 {
+  margin-top: 14px;
+}
+
+@media screen and (min-width: 720px){
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
 }

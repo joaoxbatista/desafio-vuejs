@@ -1,0 +1,25 @@
+.btn-primary, .btn-default {
+  padding: 10px 20px;
+  border: none;
+  border-radius: $rounded-sm;
+
+  i {
+    margin-right: 8px;
+  }
+}
+
+.btn-primary {
+  background-color: $indigo;
+  color: white;
+  &--disabled {
+    background-color: $indigo-disabled;
+  }
+}
+
+.btn-default {
+  background-color: $nobel;
+  color: white;
+  &--disabled {
+    background-color: $indigo-disabled;
+  }
+}
