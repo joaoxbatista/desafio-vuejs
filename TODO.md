@@ -40,12 +40,10 @@ module.exports = {
 Configurando o Prettier
 ```
 .prettierrc
-
 {
   "tabWidth": 2,
   "useTabs": false
 }
-
 ```
 
 Configurando husky
@@ -68,12 +66,11 @@ Configurando o lint-staged
     }
 ```
 
-## Criar os componentes
+## Vue-router
 
-## Instalar o VueRouter
-
-## Criar páginas
-
-## Criar store e seus módulos
-
-## Criar os testes
+Adicionar esse trecho para funcionar em ambiente desenvolvimento com webpack.
+```
+devServer: {
+    historyApiFallback: true,
+},
+```
