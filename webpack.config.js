@@ -2,8 +2,10 @@ const { join } = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const { HotModuleReplacementPlugin } = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+require('babel-polyfill');
+
 module.exports = {
-  entry: join(__dirname, 'src', 'app.js'),
+  entry: ['babel-polyfill', join(__dirname, 'src', 'app.js')],
   output: {
     path: join(__dirname, 'dist', 'build'),
     filename: 'app.min.js',
@@ -11,6 +13,7 @@ module.exports = {
   resolve: {
     alias: {
       '@': join(__dirname, 'src'),
+      vue$: 'vue/dist/vue.esm.js', // 'vue/dist/vue.common.js' for webpack 1
     },
   },
   module: {
@@ -38,15 +41,18 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              // Prefer `dart-sass`
               implementation: require('dart-sass'),
               additionalData: `
-                      @import '@/scss/_variables.scss';
-                      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
-                    `,
+                @import '@/scss/app.scss';
+                @import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap';
+              `,
             },
           },
         ],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },
@@ -60,4 +66,8 @@ module.exports = {
       template: join(__dirname, 'public', 'index.html'),
     }),
   ],
+
+  devServer: {
+    historyApiFallback: true,
+  },
 };
