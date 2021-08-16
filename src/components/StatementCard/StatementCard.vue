@@ -51,7 +51,7 @@
   import StatementFileList from '@/components/StatementFileList/StatementFileList.vue';
 
   export default {
-    name: 'CardComunication',
+    name: 'StatementCard',
     components: {
       Card,
       StatementFileList,
