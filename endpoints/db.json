@@ -22,7 +22,7 @@
     {
       "id": 3,
       "title": "Novos Serviços",
-      "seen": false,
+      "seen": true,
       "type": 1,
       "description": "Novos serviços, clique para visualizar o material de divulgação.",
       "fullDescription": "Novos serviços, clique para visualizar o material de divulgação.",
@@ -53,7 +53,7 @@
     {
       "id": 5,
       "title": "Campanha Banda Larga",
-      "seen": false,
+      "seen": true,
       "type": 2,
       "description": "Experimente a Banda Larga de Ultravelocidade com Vivo Fibra",
       "fullDescription": "Baixe arquivos, assista a vídeos em HD e jogue online com maior desempenho. Acesse a internet de vários dispositivos ao mesmo tempo na sua casa e com mais estabilidade. Compartilhe fotos e vídeos com rapidez através de altas velocidades de upload. Wi-Fi grátis para toda a família acessar ao mesmo tempo",
