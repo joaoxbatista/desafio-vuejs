@@ -11,7 +11,7 @@ export const getStatements = ({ commit }) => {
         resolve(response.data);
       })
       .catch((error) => {
-        reject(error.response.data);
+        reject(error);
       });
   });
 };
@@ -25,7 +25,7 @@ export const updateStatement = (_, statement) => {
         resolve(response.data);
       })
       .catch((error) => {
-        reject(error.response.data);
+        reject(error);
       });
   });
 };

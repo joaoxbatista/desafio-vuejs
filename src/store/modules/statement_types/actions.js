@@ -11,7 +11,7 @@ export const getStatementTypes = async ({ commit }) => {
         resolve(response.data);
       })
       .catch((error) => {
-        reject(error.response.data);
+        reject(error);
       });
   });
 };
