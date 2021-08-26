@@ -65,3 +65,233 @@ Ao terminar faça um pull request! :octocat:
 - Teste!
 
 👊 Bom desafio!
+
+
+
+
+-------------------------------------------
+
+## Resultado
+![Imagem da aplicação](https://i.ibb.co/fF3krf3/1.gif)
+
+Esse projeto foi desenvolvido utilizando o framework Vue.js e as seguintes bibliotecas:
+
+**vue:** na versão  2.6.14
+
+**vuex:** na versão  3.6.2
+
+**vue-router:** na versão  3.5.2
+
+**vue-awesome-swiper:**  na versão  4.1.1
+
+**axios:** na versão 0.21.1
+
+**sass:** na versão 1.37.5
+
+**moment:** na versão 2.29.1
+
+## Como rodar a aplicação
+
+**1. Clone o projeto**
+
+```bash
+git clone url
+```
+
+**2. Instale as dependências**
+
+```bash
+npm install
+```
+
+**3. Inicie o servidor fake**
+
+```bash
+npm run server
+```
+
+**4. Inicie a aplicação**
+
+Existem dois modos de rodar a aplicação, sendo elas:
+
+**1. Rode a aplicação em modo de desenvolvimento**
+
+```bash
+npm run dev
+```
+
+**2. Rode a aplicação com os arquivos já buildados**
+
+Esso comando gera os bundles que ficaram armazenados em /dist/build. Existem um arquivo /dist/index.html onde o mesmo importa os arquivos do build corretamente. Ignore o arquivo /dist/build/index.html.
+
+Caso já existam arquivos na pasta **/dist/build** basta apenas executar o seguindo comando
+
+```bash
+npm run prod
+```
+
+Esse comando roda o lite-server na pasta dist
+
+```bash
+npm run client
+```
+---
+
+## Card Component
+
+Componente Genérico para criação de cards
+
+## Slots
+
+> title: card-header
+
+## Props
+
+> title:
+
+- **type**: string
+  
+> borderColor:
+
+- **type**: string
+- **aceppted**: ['blue', 'orange', 'green', 'purple']
+
+> disabled:
+
+- **type**: boolean
+- **aceppted**: (true|false)
+  
+## Como utilizar?
+
+Exemplo 1 - Utilizando as props
+```html
+<Card title="Card 1" borderColor="orange" class="mb-14">
+  Informaçoes do card 1
+</Card>
+<Card title="Card 2" borderColor="purple" class="mb-14">
+  Informaçoes do card 2
+</Card>
+<Card title="Card 3" borderColor="blue" class="mb-14">
+  Informaçoes do card 3
+</Card>
+<Card title="Card 4" borderColor="green" class="mb-14">
+  Informaçoes do card 4
+</Card>
+<Card title="Card 1" borderColor="orange" disabled class="mb-14">
+  Informaçoes do card desabilitado 1
+</Card>
+<Card title="Card 2" borderColor="purple" disabled class="mb-14">
+  Informaçoes do card desabilitado 2
+</Card>
+<Card title="Card 3" borderColor="blue" disabled class="mb-14">
+  Informaçoes do card desabilitado 3
+</Card>
+<Card title="Card 4" borderColor="green" disabled class="mb-14">
+  Informaçoes do card desabilitado 4
+</Card>
+```
+
+Exemplo 2 - Utilizando os slots
+```html
+<Card 
+  class="statement-card" 
+  :borderColor="borderColor" 
+  :disabled="data.seen"
+>
+  <template v-slot:card-header>
+    <router-link 
+    :to="{ 
+      name: 'statements.show', 
+      params: { id: data.id } }
+    ">
+      <div class="statement-card__header">
+        <h3 class="card__title">{{ data.title }}</h3>
+        <h4 class="statement-card__id">{{ data.id }}</h4>
+      </div>
+    </router-link>
+  </template>
+</Card>
+```
+
+## StatementCard Component
+
+Componente para os comunicados
+### Props
+
+> data:
+
+- **type**: object
+- **aceppted**: 
+```
+{
+  id: number,
+  title: string,
+  seen: boolean,
+  type: int,
+  description: string,
+  fullDescription": string,
+  date: string,
+  files: [
+    {
+      "type": string,
+      "name": string,
+      "url": string
+    }
+  ]
+}
+```
+  
+> details:
+
+- **type**: boolean
+- **aceppted**: (true|false)
+  
+### Como utilizar?
+
+Exemplo 1 - Utilizando as props
+```html
+<statement-card :data="statement" details></statement-card>
+```
+
+
+## Card StatementFileList
+
+Componente para listagem de arquivos do comunicado
+
+
+### Props
+
+> files:
+
+- **type**: array
+- **aceppted**: 
+```
+[
+  {
+    "type": string,
+    "name": string,
+    "url": string
+  }
+]
+```
+  
+> borderColor:
+
+- **type**: string
+- **aceppted**: ['blue', 'orange', 'green', 'purple']
+
+> disabled:
+
+- **type**: boolean
+- **aceppted**: (true|false)
+  
+### Como utilizar?
+
+Exemplo 1 - Utilizando as props
+```html
+<statement-card :data="statement" details></statement-card>
+```
+
+
+
+
